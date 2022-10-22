@@ -33,9 +33,3 @@ submitBtn.addEventListener("click", (e) => {
             })
     }
 })
-
-getCity(geoURL, city, geoUsername);
-getWeather(weatherKey, weatherURL, cityData);
-getImage(pixabayURL, city, pixabayKey);
-postData();
-receiveData();
