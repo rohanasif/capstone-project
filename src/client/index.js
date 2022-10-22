@@ -1,4 +1,4 @@
-const geoURL = "api.geonames.org/search?";
+const geoURL = "api.geonames.org/searchJSON?";
 const geoUsername = `${process.env.GEO_USERNAME}`;
 const weatherKey = `${process.env.WEATHER_KEY}`;
 const weatherURL = "https://api.weatherbit.io/v2.0/current?";
