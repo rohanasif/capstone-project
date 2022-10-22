@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 // Cors for cross origin allowance
 app.use(cors())
 // Initialize the main project folder
-app.use(express.static('../client'));
+app.use(express.static('client'));
 
 app.get("/all", function sendData(req, res) {
     res.send(projectData);
@@ -42,7 +42,7 @@ app.post("/add", (req, res) => {
 })
 
 app.get("/", (req, res) => {
-    res.sendFile("index.html", { root: "../client/views" })
+    res.sendFile("index.html", { root: "src/client/views" })
 })
 
 // Setup Server
