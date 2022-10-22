@@ -31,13 +31,16 @@ module.exports = {
             {
                 test: '/.scss$/',
                 use: ['style-loader', 'css-loader', 'sass-loader']
-            }
-        ],
-        loaders: [
-            { test: /\.xml$/, loader: 'xml-loader' }, // will load all .xml files with xml-loader by default
+            },
             {
-                test: /\.json$/,
-                loader: 'json-loader'
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
             }
         ]
 
